@@ -53,6 +53,20 @@ $ exit;
 
 ## PhpMyAdmin
 
+```
 $ docker pull phpmyadmin
 
 $ docker run --name phpmyadmin-container -d --link mysql-container:db -p 8081:80 phpmyadmin
+```
+
+## Removendo Tudo
+
+```
+docker rm -f $(docker ps -a -q)
+
+docker volume rm $(docker volume ls -q)
+
+docker network prune
+
+docker rmi -f $(docker images -aq)
+```
