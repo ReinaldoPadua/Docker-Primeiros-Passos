@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  mysql-service:
+     image: mysql:latest
+     environment:
+       MYSQL_ROOT_PASSWORD: "root"
+       MYSQL_DATABASE: "testedb"
+     ports:
+       - "3306:3306"
+     volumes:
+       - mysql-vol:/var/lib/mysql
+     networks:
+       - my-stack-network
+
+  phpmyadmin-service:
+    image: phpmyadmin
+    environment:
+      PMA_HOST: mysql-service
+    ports:
+      - 8086:80
+    networks:
+      - my-stack-network
+    depends_on:
+      - mysql-service
+
+networks: 
+  my-stack-network:
+    driver: bridge
+
+volumes:
+  mysql-vol:
+  mongodb-vol:
