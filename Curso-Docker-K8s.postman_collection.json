@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "44955666-72d1-4f18-a5e8-59d232fbd1f5",
+		"name": "Curso-Docker-K8s",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3109/records/v1/Client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3109",
+					"path": [
+						"records",
+						"v1",
+						"Client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Ciclano Fulano\",\r\n    \"email\": \"fulano91@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3109/records/v1/Client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3109",
+					"path": [
+						"records",
+						"v1",
+						"Client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Client by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3109/records/v1/Client/78115",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3109",
+					"path": [
+						"records",
+						"v1",
+						"Client",
+						"78115"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3109/records/v1/Product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3109",
+					"path": [
+						"records",
+						"v1",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3109/records/v1/Product/60465",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3109",
+					"path": [
+						"records",
+						"v1",
+						"Product",
+						"60465"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\":\"Item 1\",\r\n    \"value\": 1.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3109/records/v1/Product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3109",
+					"path": [
+						"records",
+						"v1",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientId\": 78115,\r\n    \"productId\": 60465,\r\n    \"amount\":25\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/microservice-orders/v1/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"microservice-orders",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/microservice-orders/v1/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"microservice-orders",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

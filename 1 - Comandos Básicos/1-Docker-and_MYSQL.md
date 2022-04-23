@@ -3,7 +3,7 @@
 ### Baixar última versão do mysql
 
 ```
-$ docker pull mysql:lastest
+$ docker pull mysql:latest
 ```
 
 ### Listar todas imagens
