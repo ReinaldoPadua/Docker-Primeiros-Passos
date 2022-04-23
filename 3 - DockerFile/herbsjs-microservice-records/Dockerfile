@@ -21,5 +21,10 @@ CMD ["npm", "start"]
 
 #docker run -it -p 3109:3109 herbsjs-records
 
-#docker tag herbsjs-records reinaldopadua/herbsjs-records
-#docker push reinaldopadua/herbsjs-records 
+# criar conta no docker hub
+
+#docker tag herbsjs-records meu-usuario/herbsjs-records
+
+#docker login
+
+#docker push meu-usuario/herbsjs-records 

@@ -24,6 +24,15 @@ services:
     depends_on:
       - mysql-service
 
+  records-service:
+    image: 'reinaldopadua/herbsjs-records'
+    ports: 
+      - 3109:3109
+    depends_on:
+      - mysql-service
+    networks:
+      - my-stack-network    
+
 networks: 
   my-stack-network:
     driver: bridge
